@@ -1,0 +1,87 @@
+html body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("../res/bg.png")no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 700; 
+    width: 100%;
+    color: white;
+    text-shadow: 4px 4px 5px #2e2e2e;
+}
+
+.clock-container{
+    width: 80%;
+    min-width: 900px;
+    height: 500px;
+    background-image: linear-gradient(to right, rgba(114,137,218,0.9), rgba(35,39,42,0.9));
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 15px;
+}
+
+.clock{
+    width: 450px;
+    height: 450px;
+    border: 20px white solid;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    background-image: linear-gradient(to left, rgba(172, 172, 172, 0.70), rgba(28, 82, 104, 0.70));
+    
+}
+.hand{
+    width: 50%;
+    height: 6px;
+    background: #2e2e2e;
+    position: absolute;
+    top: 50%;
+}
+
+.d-clock{
+    width: 450px;
+    height: 450px;
+    background: gray;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.d-clock--area{ 
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: black;
+    width: 90%;
+    height: 90%;
+    margin: auto auto;
+}
