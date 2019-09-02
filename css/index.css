@@ -1,3 +1,11 @@
+ 
+@font-face {
+    font-family: digiclock;
+    src: url(../res/fonts/digitalism.ttf);
+    font-weight: 900;
+  }
+
+
 html body{
     width: 100vw;
     height: 100vh;
@@ -29,7 +37,7 @@ h1{
     background-image: linear-gradient(to right, rgba(114,137,218,0.9), rgba(35,39,42,0.9));
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
     padding: 15px;
@@ -62,6 +70,16 @@ h1{
     background: #2e2e2e;
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: cubic-bezier(0.1, 2.7, 0.58, 1) all 0.05s;
+}
+
+.sec-hand{
+    height: 2px !important;
+}
+.min-hand{
+    height: 8px;
 }
 
 .d-clock{
@@ -76,7 +94,7 @@ h1{
 }
 .d-clock--area{ 
     display: flex;
-    align-content: center;
+    align-content: space-around;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -84,4 +102,31 @@ h1{
     width: 90%;
     height: 90%;
     margin: auto auto;
+    color: #0099ff;
+}
+
+.d-clock--area>div{
+    width: 100%;
+    padding: 0 20px;
+    font-family: 'digiclock' , Arial, sans-serif;
+    font-size: 8em;
+}
+
+
+
+/*MEdia querys*/
+@media (max-width: 600px){
+    .clock-container {
+        width: 90%;
+        height: auto;
+        min-width: auto;
+        flex-wrap: wrap;
+        padding: 5% 15px;
+        padding-top: 29px;
+    }
+
+    html body{
+         height: auto;
+         width: 100%;
+    }
 }
